@@ -17,9 +17,16 @@ ruled.client.connect_signal("request::rules", function()
                 "Wpa_gui",
                 "veromix",
                 "xtightvncviewer",
-		"Lxappearance",
-		"Nitrogen"
+		        "feh",
+				--"Minecraft",
+				--"net-technicpack-launcher-LauncherMain",
+        	--[[	"thunar",]]
+		        "Lxappearance",
+                "lxappearance",
+	     	    --"MPlayer",
             },
+            -- Note that the name property shown in xprop might be set slightly after creation of the client
+            -- and the name shown there might not match defined rules here.
             name = {
                 "Event Tester",  -- xev.
             },
@@ -30,18 +37,39 @@ ruled.client.connect_signal("request::rules", function()
             }
         },
         properties = {
-            floating = true
+            floating = true,
         }
     }
+
+	ruled.client.append_rule {
+		id = "ontop",
+		rule_any = {
+			"feh",
+		},
+		properties = {
+			ontop = true,
+		}
+	}
 
     -- Add titlebars to normal clients
     ruled.client.append_rule {
         id = "titlebars",
         rule_any = {
             type = {
-                "normal"
+                "normal",
+				"dialog",
+				"utility"
             },
         },
+        -- except_any = {
+        --     class = {
+        --         "qutebrowser",
+        --         -- "obsidian",
+		--         "Org.gnome.Nautilus",
+		--         "Gnome-control-center",
+        --         "google-chrome"
+        --     },
+        -- },
         properties = {
             titlebars_enabled = true
         }

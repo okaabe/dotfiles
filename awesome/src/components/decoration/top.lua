@@ -26,8 +26,12 @@ client.connect_signal("request::titlebars", function(c)
 	    ontop = true,
     }): setup {
         {
+            buttons = buttons,
+            layout = wibox.layout.fixed.horizontal,
+        },
+        {
             {
-                helpers.text(string.upper(c.class or c.name), beautiful.titlebar_fg_focus),
+                helpers.text(string.lower(c.class or c.name), beautiful.titlebar_fg_focus),
                 spacing = dpi(8),
 		        buttons = buttons,
                 layout = wibox.layout.fixed.horizontal,
@@ -35,10 +39,6 @@ client.connect_signal("request::titlebars", function(c)
             left   = (beautiful.titlebar_margin or dpi(5)) + 5,
             widget = wibox.container.margin,
         },
-	    {
-            buttons = buttons,
-            layout = wibox.layout.fixed.horizontal,
-    	},
 	    {
             {
                 helpers.add_click_event(helpers.text("", beautiful.titlebar_fg_focus), function()
@@ -53,6 +53,8 @@ client.connect_signal("request::titlebars", function(c)
             right = (beautiful.titlebar_margin or dpi(5)) + 5,
             widget = wibox.container.margin,
         },
+        expand = "none",
+        
         layout = wibox.layout.align.horizontal,
     }
 end)

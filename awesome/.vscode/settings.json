@@ -1,8 +1,7 @@
 {
     "Lua.diagnostics.globals": [
         "awesome",
-        "client",
-        "screen"
+        "client"
     ],
     "Lua.diagnostics.disable": [
         "different-requires"

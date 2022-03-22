@@ -10,7 +10,8 @@ end
 autostart = {
     "nm-applet",
     "corectrl",
-    "nitrogen --restore"
+    --"compton",
+	"nitrogen --restore"
 }
 
 for app = 1, #autostart do run_once(autostart[app]) end

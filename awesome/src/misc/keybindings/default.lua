@@ -1,11 +1,5 @@
 local awful = require("awful")
-
-awful.mouse.append_global_mousebindings({
-    awful.button({ }, 3, function() mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewprev),
-    awful.button({ }, 5, awful.tag.viewnext),
-})
-
+local helpers = require("src.helpers")
 
 client.connect_signal("request::default_mousebindings", function()
     awful.mouse.append_client_mousebindings({
@@ -24,14 +18,25 @@ end)
 
 client.connect_signal("request::default_keybindings", function()
     awful.keyboard.append_client_keybindings({
-        awful.key {
-            modifiers = { modkey },
-            key = "m",
-            on_press = function(c)
-                c.maximized = not c.maximized
-                c:raise()
-            end
-        },
+		awful.key {
+			modifiers = { modkey },
+			key = "m",
+			group = "Client",
+			description = "maximize",
+			on_press = function(c)
+                helpers.maximize(c)
+			end
+		},
+		awful.key {
+			modifiers = { modkey },
+			key = "n",
+			group = "Client",
+			description = "minimize",
+			on_press = function(c)
+				c.minimized = not c.minimized
+				c:raise()
+			end
+		},
         awful.key {
             modifiers = { modkey },
             key = "f",
