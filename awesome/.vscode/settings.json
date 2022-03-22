@@ -1,0 +1,10 @@
+{
+    "Lua.diagnostics.globals": [
+        "awesome",
+        "client",
+        "screen"
+    ],
+    "Lua.diagnostics.disable": [
+        "different-requires"
+    ]
+}
