@@ -24,39 +24,12 @@ browser = "firefox"
 reboot = "reboot"
 shutdown = "poweroff"
 
--- apps table
-apps = {
-    { "BROWSER", browser },
-}
-
--- tools table
-tools = {
-    { "SHOT", shoot },
-    { "EDITOR", editor_cmd },
-    { "TERMINAL", terminal },
-    { "ZOOM", zoom }
-}
-
--- system table
-system = {
-    { "REBOOT", reboot },
-    { "SHUTDOWN", shutdown },
-    { "EXIT", function() awesome.quit() end }
-}
-
---- table of awesome
-awesomemenu = {
-    { "KEYBIND", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-    { "RESTART", function() awesome.restart() end },
-}
-
-
 mymainmenu = awful.menu({
     items = {
-        { "APP", apps },
-        { "TOOL", tools },
-        { "SYSTEM", system },
-        { "UI ", awesomemenu, beautiful.awesome_icon }
+        { "Web", browser },
+        { "Term", terminal },
+        { "Config", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
+        { "Exit", function() awesome.quit() end }
     }
 })
 

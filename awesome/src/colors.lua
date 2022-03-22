@@ -6,7 +6,7 @@ local theme   = {}
 -- Global font
 theme.font              =  "PragmataProMonoLiga Nerd Font 12" -- "PragmataProMonoLiga Nerd Font 12"-- "Iosevka 11"
 theme.font_notifs       = "PragmataProMonoLiga Nerd Font Bold 13"
-theme.font_mouse_menu   = "PragmataProMonoLiga Nerd Font Bold 13"
+theme.font_mouse_menu   = "PragmataProMonoLiga Nerd Font 12"
 theme.font_hotkeys      = "PragmataProMonoLiga Nerd Font Bold 13"
 
 -- Wibox Background
