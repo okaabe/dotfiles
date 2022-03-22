@@ -1,8 +1,8 @@
 # Based on Bridge by ScionicSpectre and Adwaita by GNOME
 # vim:set ts=2 sw=2 sts=2 ai et:
 #
-# This is the GTK 2 version of Materia. It's whole purpose is to look as the
-# GTK 3 version as much as possible until GTK 2 dies completely.
+# This is the GTK+ 2 version of Materia. It's whole purpose is to look as the
+# GTK+ 3 version as much as possible until GTK+ 2 dies completely.
 #
 # Note: comments for explaining styles are on the bottom of each file beside the
 # widget matches.
@@ -12,19 +12,15 @@
 # order to not mess up the dark theme.
 
 # Text/base
-gtk-color-scheme = "text_color:#212121\nbase_color:#EDECE8"
+gtk-color-scheme = "text_color:#212121\nbase_color:#FFFFFF"
 # Foreground/background
-gtk-color-scheme = "fg_color:#212121\nbg_color:#EDECE8"
+gtk-color-scheme = "fg_color:#212121\nbg_color:#F5F5F5"
 # Selected foreground/background
-gtk-color-scheme = "selected_fg_color:#EDECE8\nselected_bg_color:#808C96"
+gtk-color-scheme = "selected_fg_color:#FFFFFF\nselected_bg_color:#5D7DFB"
 # Titlebar foreground/background
-gtk-color-scheme = "titlebar_fg_color:#212121\ntitlebar_bg_color:#EDECE8"
-# Menus
-gtk-color-scheme = "menu_color:#EDECE8"
-# Tooltips foreground/background
-gtk-color-scheme = "tooltip_fg_color:#EDECE8\ntooltip_bg_color:#616161"
+gtk-color-scheme = "titlebar_fg_color:#efefef\ntitlebar_bg_color:#3f3f3f"
 # Links
-gtk-color-scheme = "link_color:#1A73E8\nvisited_link_color:#9C27B0"
+gtk-color-scheme = "link_color:#42A5F5\nvisited_link_color:#E040FB"
 
 # Set GTK settings
 gtk-auto-mnemonics              = 1
@@ -34,3 +30,4 @@ gtk-primary-button-warps-slider = 1
 include "main.rc"
 include "apps.rc"
 include "hacks.rc"
+include "panel.rc"
